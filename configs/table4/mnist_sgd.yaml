@@ -1,0 +1,22 @@
+output:
+  folder: output/table4/mnist_sgd
+  target_model_count: 100
+dataset:
+  name: mnist
+  mnistcifar:
+    num_classes: 10
+model:
+  arch: lenet
+  lenet:
+    width: 1
+  model_count_times_batch_size: 1000
+  init: regular
+optimizer:
+  name: SGD
+  epochs: 400
+  momentum: 0.5
+  lr: 0.01
+  batch_size: 64
+distributed:
+  loss_thres: -999,999
+  num_samples: 100,300,500,1000

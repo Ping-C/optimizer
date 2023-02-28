@@ -1,0 +1,22 @@
+output:
+  folder: output/table2/mnist_linear
+  target_model_count: 200
+dataset:
+  name: mnist
+  mnistcifar:
+    num_classes: 2
+model:
+  arch: linear
+  init: regular
+  model_count_times_batch_size: 5000
+optimizer:
+  name: SGD
+  lr: 0.1
+  epochs: 20
+  batch_size: 2
+training:
+  seed: 0
+distributed:
+  loss_thres: 0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65
+  num_samples: 2,4,8,16,32
+  target_model_count_subrun: 10

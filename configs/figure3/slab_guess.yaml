@@ -1,0 +1,16 @@
+output:
+  folder: output/figure3/slab_guess
+  target_model_count: 10000
+dataset:
+  name: slab
+  seed: 100
+model:
+  arch: mlp
+  mlp:
+    hidden_units: 40
+    layers: 1
+  model_count_times_batch_size: 5000000
+distributed:
+  loss_thres: -999,999
+  num_samples: '200'
+  target_model_count_subrun: 1

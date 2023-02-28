@@ -1,0 +1,19 @@
+output:
+  folder: output/table4/cifar_greedyrandom
+  target_model_count: 100
+dataset:
+  name: cifar10
+  mnistcifar:
+    num_classes: 10
+model:
+  arch: lenet
+  lenet:
+    width: 1
+  model_count_times_batch_size: 100000
+optimizer:
+  name: GreedyRandom
+  epochs: 80000
+  es_acc: 1
+distributed:
+  loss_thres: -999,999
+  num_samples: 100,300,500,1000

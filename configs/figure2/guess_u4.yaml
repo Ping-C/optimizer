@@ -1,0 +1,22 @@
+output:
+  folder: output/figure2/u4_guess
+  target_model_count: 500000
+dataset:
+  name: kink
+  kink:
+    margin: 0.25
+    noise: 0
+model:
+  arch: mlp
+  mlp:
+    hidden_units: 4
+    layers: 1
+  model_count_times_batch_size: 48000000
+optimizer:
+  name: guess
+distributed:
+  loss_thres: "-999,999"
+  data_seed: 0
+  training_seed: 0
+  target_model_count_subrun: 500000
+  num_samples: "16"

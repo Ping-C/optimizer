@@ -1,0 +1,18 @@
+output:
+  folder: output/table3/cifar_guess
+  target_model_count: 100
+dataset:
+  name: cifar10
+  mnistcifar:
+    num_classes: 2
+model:
+  arch: lenet
+  lenet:
+    width: 0.5
+  model_count_times_batch_size: 10000
+optimizer:
+  name: guess
+distributed:
+  loss_thres: 0.55,0.57,0.59,0.61,0.63,0.65,0.67
+  num_samples: 2,4,8,16,24
+  target_model_count_subrun: 1
